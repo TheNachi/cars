@@ -11,16 +11,21 @@ import Mapbox
 class SixtMapViewController: UIViewController {
     public var viewModel: SixtViewModel?
     @IBOutlet weak var sixtMapView: MGLMapView!
+    public var sixtListVC: SixtListViewController?
+    weak var delegate: SixtMapVCDelegate?
+    @IBOutlet weak var goBackButton: UIButton!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         sixtMapView.delegate = self
         sixtMapView.autoresizingMask = [.flexibleWidth, .flexibleHeight]
+        self.goBackButton.isHidden = true
     }
     
     func bindViewModel(with viewModel: SixtViewModel) {
         self.viewModel = viewModel
         DispatchQueue.main.async {
+            self.sixtListVC?.delegate = self
             self.sixtMapView.addAnnotations(viewModel.getAnnotations())
             self.sixtMapView.setVisibleCoordinates(viewModel.getCoordinates(),
                                                    count: UInt(viewModel.getCoordinates().count),
@@ -28,6 +33,14 @@ class SixtMapViewController: UIViewController {
                                                    animated: true)
             self.sixtMapView.automaticallyAdjustsContentInset = true
         }
+    }
+    
+    @IBAction func goBackPressed(_ sender: UIButton) {
+        guard let vModel = self.viewModel else {
+            return
+        }
+        self.goBackButton.isHidden = true
+        self.bindViewModel(with: vModel)
     }
 }
 
@@ -48,4 +61,16 @@ extension SixtMapViewController: MGLMapViewDelegate {
     func mapView(_ mapView: MGLMapView, annotationCanShowCallout annotation: MGLAnnotation) -> Bool {
         return true
     }
+}
+
+extension SixtMapViewController: SixtListVCDelgate {
+    func onCarSelected(car: SixtModel) {
+        self.sixtMapView.setCenter(car.coordinates, zoomLevel: 20, animated: true)
+        self.goBackButton.isHidden = false
+        delegate?.onCarZoomed()
+    }
+}
+
+protocol SixtMapVCDelegate: class {
+    func onCarZoomed()
 }

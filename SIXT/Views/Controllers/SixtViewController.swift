@@ -10,6 +10,7 @@ import UIKit
 class SixtViewController: UIViewController {
     @IBOutlet weak var sixtMapView: UIView!
     @IBOutlet weak var sixtTableView: UIView!
+    @IBOutlet weak var sixtSegementControl: UISegmentedControl!
     
     private var sixtMapVC: SixtMapViewController?
     private var sixtListVC: SixtListViewController?
@@ -41,14 +42,16 @@ class SixtViewController: UIViewController {
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if segue.identifier == StringConstants.goToSixtMaps.rawValue,
-           let sixtMapVC = segue.destination as? SixtMapViewController {
-            self.sixtMapVC = sixtMapVC
-        }
-        
+    
         if segue.identifier == StringConstants.goToSixtList.rawValue,
            let sixtListVC = segue.destination as? SixtListViewController {
             self.sixtListVC = sixtListVC
+        }
+        
+        if segue.identifier == StringConstants.goToSixtMaps.rawValue,
+           let sixtMapVC = segue.destination as? SixtMapViewController {
+            self.sixtMapVC = sixtMapVC
+            self.sixtMapVC?.delegate = self
         }
     }
 }
@@ -58,7 +61,16 @@ extension SixtViewController: SixtViewModelDelegate {
         guard let vModel = self.viewModel else { return }
         DispatchQueue.main.async {
             self.sixtMapVC?.bindViewModel(with: vModel)
+            self.sixtMapVC?.sixtListVC = self.sixtListVC
             self.sixtListVC?.bindViewModel(with: vModel)
         }
+    }
+}
+
+extension SixtViewController: SixtMapVCDelegate {
+    func onCarZoomed() {
+        self.sixtSegementControl.selectedSegmentIndex = 0
+        sixtMapView.alpha = 1
+        sixtTableView.alpha = 0
     }
 }

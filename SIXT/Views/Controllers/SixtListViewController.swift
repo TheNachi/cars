@@ -10,6 +10,7 @@ import UIKit
 class SixtListViewController: UIViewController {
     @IBOutlet weak var sixtTableView: UITableView!
     public var viewModel: SixtViewModel?
+    weak var delegate: SixtListVCDelgate?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -46,4 +47,13 @@ extension SixtListViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 280
     }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        guard let vModel = self.viewModel else { return }
+        self.delegate?.onCarSelected(car: vModel.getCar(index: indexPath.row))
+    }
+}
+
+protocol SixtListVCDelgate: class {
+    func onCarSelected(car: SixtModel)
 }

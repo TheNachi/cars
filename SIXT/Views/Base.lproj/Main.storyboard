@@ -58,6 +58,7 @@
                     <navigationItem key="navigationItem" id="7hf-Qd-oHd"/>
                     <connections>
                         <outlet property="sixtMapView" destination="7VU-g4-tkm" id="kcR-Kf-Wd1"/>
+                        <outlet property="sixtSegementControl" destination="3aH-BC-w2N" id="tEm-lm-ir8"/>
                         <outlet property="sixtTableView" destination="u0F-l9-jK8" id="XBe-kF-IVl"/>
                     </connections>
                 </viewController>
@@ -98,17 +99,31 @@
                                     <userDefinedRuntimeAttribute type="string" keyPath="styleURL__" value="mapbox://styles/mapbox/streets-v11"/>
                                 </userDefinedRuntimeAttributes>
                             </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="c0t-lY-LEW">
+                                <rect key="frame" x="324" y="74" width="60" height="60"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="60" id="IKS-u3-kvm"/>
+                                    <constraint firstAttribute="height" constant="60" id="wEM-9m-tki"/>
+                                </constraints>
+                                <state key="normal" image="backButton"/>
+                                <connections>
+                                    <action selector="goBackPressed:" destination="rd5-XU-POg" eventType="touchUpInside" id="VFc-9l-4Ab"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="HeG-6B-66M"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="HeG-6B-66M" firstAttribute="trailing" secondItem="8D0-1C-xW2" secondAttribute="trailing" id="35c-xw-vTe"/>
+                            <constraint firstItem="HeG-6B-66M" firstAttribute="trailing" secondItem="c0t-lY-LEW" secondAttribute="trailing" constant="30" id="DWL-5W-btO"/>
+                            <constraint firstItem="c0t-lY-LEW" firstAttribute="top" secondItem="HeG-6B-66M" secondAttribute="top" constant="30" id="Hre-T8-ebI"/>
                             <constraint firstItem="8D0-1C-xW2" firstAttribute="leading" secondItem="HeG-6B-66M" secondAttribute="leading" id="aCM-yz-scT"/>
                             <constraint firstItem="8D0-1C-xW2" firstAttribute="top" secondItem="FwH-6i-CRF" secondAttribute="top" id="dEa-fc-LK8"/>
                             <constraint firstAttribute="bottom" secondItem="8D0-1C-xW2" secondAttribute="bottom" id="to7-w3-Zpv"/>
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="goBackButton" destination="c0t-lY-LEW" id="uZH-7M-Had"/>
                         <outlet property="sixtMapView" destination="8D0-1C-xW2" id="2EV-Wz-yR2"/>
                     </connections>
                 </viewController>
@@ -132,7 +147,7 @@
                                         <rect key="frame" x="0.0" y="28" width="354" height="280"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="SZc-xk-maO" id="yoz-GK-NYA">
-                                            <rect key="frame" x="0.0" y="0.0" width="354" height="280"/>
+                                            <rect key="frame" x="0.0" y="5" width="354" height="270"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="JPR-nQ-zTd">
@@ -208,6 +223,7 @@
     </scenes>
     <resources>
         <image name="DummyImage" width="1050" height="600"/>
+        <image name="backButton" width="64" height="64"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

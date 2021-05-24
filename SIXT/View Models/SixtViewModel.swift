@@ -41,6 +41,8 @@ class SixtViewModel {
     private func createAnnotation(from model: SixtModel) -> MGLPointAnnotation {
         let annotation = MGLPointAnnotation()
         annotation.coordinate = model.coordinates
+        annotation.title = model.make + " " + model.modelName
+        annotation.subtitle = model.name
         annotation.accessibilityHint = model.carImageUrl
         return annotation
     }
