@@ -65,7 +65,7 @@ extension SixtMapViewController: MGLMapViewDelegate {
 
 extension SixtMapViewController: SixtListVCDelgate {
     func onCarSelected(car: SixtModel) {
-        self.sixtMapView.setCenter(car.coordinates, zoomLevel: 20, animated: true)
+        self.sixtMapView.setCenter(car.coordinates, zoomLevel: 18, animated: true)
         self.goBackButton.isHidden = false
         delegate?.onCarZoomed()
     }
