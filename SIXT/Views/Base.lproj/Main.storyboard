@@ -38,11 +38,16 @@
                                     <segue destination="tBz-MS-ek3" kind="embed" identifier="goToSixtList" id="24s-86-zO3"/>
                                 </connections>
                             </containerView>
+                            <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" style="large" translatesAutoresizingMaskIntoConstraints="NO" id="ioG-TN-0ca">
+                                <rect key="frame" x="188.5" y="456.5" width="37" height="37"/>
+                                <color key="color" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </activityIndicatorView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" red="0.92156862745098034" green="0.92156862745098034" blue="0.92156862745098034" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="3aH-BC-w2N" secondAttribute="trailing" id="3NS-5h-eOj"/>
+                            <constraint firstItem="ioG-TN-0ca" firstAttribute="centerY" secondItem="6Tk-OE-BBY" secondAttribute="centerY" id="41G-u4-ubM"/>
                             <constraint firstItem="3aH-BC-w2N" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="83f-S2-5Dh"/>
                             <constraint firstItem="u0F-l9-jK8" firstAttribute="top" secondItem="3aH-BC-w2N" secondAttribute="bottom" id="OuN-NW-E8n"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="u0F-l9-jK8" secondAttribute="trailing" id="Vto-5j-uiv"/>
@@ -53,12 +58,14 @@
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="7VU-g4-tkm" secondAttribute="trailing" id="lPx-vo-sAS"/>
                             <constraint firstItem="7VU-g4-tkm" firstAttribute="bottom" secondItem="8bC-Xf-vdC" secondAttribute="bottom" id="vHu-ii-MNp"/>
                             <constraint firstItem="7VU-g4-tkm" firstAttribute="top" secondItem="3aH-BC-w2N" secondAttribute="bottom" id="wlX-bS-OJy"/>
+                            <constraint firstItem="ioG-TN-0ca" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="yuM-Vj-iS9"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="7hf-Qd-oHd"/>
                     <connections>
                         <outlet property="sixtMapView" destination="7VU-g4-tkm" id="kcR-Kf-Wd1"/>
                         <outlet property="sixtSegementControl" destination="3aH-BC-w2N" id="tEm-lm-ir8"/>
+                        <outlet property="sixtSpinner" destination="ioG-TN-0ca" id="WO6-T9-W9h"/>
                         <outlet property="sixtTableView" destination="u0F-l9-jK8" id="XBe-kF-IVl"/>
                     </connections>
                 </viewController>
@@ -147,11 +154,11 @@
                                         <rect key="frame" x="0.0" y="28" width="354" height="280"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="SZc-xk-maO" id="yoz-GK-NYA">
-                                            <rect key="frame" x="0.0" y="5" width="354" height="270"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="354" height="280"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="JPR-nQ-zTd">
-                                                    <rect key="frame" x="10" y="10" width="334" height="260"/>
+                                                    <rect key="frame" x="10" y="10" width="334" height="250"/>
                                                     <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <userDefinedRuntimeAttributes>
                                                         <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
@@ -172,7 +179,7 @@
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="751" text="Barbarella" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6xT-30-8kQ">
-                                                    <rect key="frame" x="134.5" y="235" width="85" height="21"/>
+                                                    <rect key="frame" x="134.5" y="225" width="85" height="21"/>
                                                     <fontDescription key="fontDescription" name="HelveticaNeue-Medium" family="Helvetica Neue" pointSize="18"/>
                                                     <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <nil key="highlightedColor"/>

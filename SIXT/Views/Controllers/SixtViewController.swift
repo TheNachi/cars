@@ -11,6 +11,7 @@ class SixtViewController: UIViewController {
     @IBOutlet weak var sixtMapView: UIView!
     @IBOutlet weak var sixtTableView: UIView!
     @IBOutlet weak var sixtSegementControl: UISegmentedControl!
+    @IBOutlet weak var sixtSpinner: UIActivityIndicatorView!
     
     private var sixtMapVC: SixtMapViewController?
     private var sixtListVC: SixtListViewController?
@@ -20,6 +21,7 @@ class SixtViewController: UIViewController {
         super.viewDidLoad()
         sixtMapView.alpha = 1
         sixtTableView.alpha = 0
+        sixtSpinner.transform = CGAffineTransform.init(scaleX: 2.5, y: 2.5)
         let sixtNetworkService = SixtNetworkService()
         viewModel = SixtViewModel(with: sixtNetworkService)
         self.bindViewModel()
@@ -27,6 +29,7 @@ class SixtViewController: UIViewController {
 
     func bindViewModel() {
         self.title = SixtViewModel.title
+        self.sixtSpinner.startAnimating()
         self.viewModel?.delegate = self
         viewModel?.getCars()
     }
@@ -57,9 +60,16 @@ class SixtViewController: UIViewController {
 }
 
 extension SixtViewController: SixtViewModelDelegate {
+    func onFail(error: Error) {
+        self.sixtSpinner.stopAnimating()
+        let alert = UIAlertController(title: StringConstants.error.rawValue, message: error.localizedDescription, preferredStyle: .alert)
+        self.present(alert, animated: true, completion: nil)
+    }
+    
     func carsGotten() {
         guard let vModel = self.viewModel else { return }
         DispatchQueue.main.async {
+            self.sixtSpinner.stopAnimating()
             self.sixtMapVC?.bindViewModel(with: vModel)
             self.sixtMapVC?.sixtListVC = self.sixtListVC
             self.sixtListVC?.bindViewModel(with: vModel)

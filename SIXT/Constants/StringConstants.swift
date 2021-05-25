@@ -14,5 +14,6 @@ enum StringConstants: String {
     case goToSixtMaps
     case sixtCarsCell
     case sixtNetworkCacheKey
+    case error = "Error"
     
 }

@@ -71,6 +71,10 @@ class SixtViewModel {
 }
 
 extension SixtViewModel: SixtNetworkServiceDelegate {
+    func onFail(error: Error) {
+        delegate?.onFail(error: error)
+    }
+    
     func onGetCars(cars: [SixtModel]) {
         self.updateCars(with: cars)
         self.setAnnotation(from: cars)
@@ -80,4 +84,5 @@ extension SixtViewModel: SixtNetworkServiceDelegate {
 
 protocol SixtViewModelDelegate: class {
     func carsGotten()
+    func onFail(error: Error)
 }

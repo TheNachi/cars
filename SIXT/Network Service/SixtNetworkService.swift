@@ -18,7 +18,7 @@ struct SixtNetworkService {
                 let session = URLSession(configuration: .default)
                 let task = session.dataTask(with: url) { (data, response, error) in
                     if error != nil {
-                        print(error?.localizedDescription)
+                        delegate?.onFail(error: error!)
                     }
                     
                     if let carsData = data {
@@ -41,13 +41,14 @@ struct SixtNetworkService {
             CacheManager.inMemoryCache.updateValue(cars, forKey: StringConstants.sixtNetworkCacheKey.rawValue)
             CacheManager.shared.cacheString(with: StringConstants.sixtNetworkCacheKey.rawValue, data: stringValue)
         } catch {
-            print(error)
+            delegate?.onFail(error: error)
         }
     }
 }
 
 protocol SixtNetworkServiceDelegate: class {
     func onGetCars(cars: [SixtModel])
+    func onFail(error: Error)
 }
 
 struct SixtNetworkCache {
@@ -63,7 +64,7 @@ struct SixtNetworkCache {
                             let cars = try decoder.decode([SixtModel].self, from: cachedData)
                             delegate?.onGetCars(cars: cars)
                         } catch {
-                            print(error)
+                            delegate?.onFail(error: error)
                         }
                     }
                 }
