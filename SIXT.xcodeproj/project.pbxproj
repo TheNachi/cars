@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		2F0FD6F7E753F73EF1F6E9C1 /* Pods_SIXT_SIXTUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 97F7A77E2EC58A2935DCD952 /* Pods_SIXT_SIXTUITests.framework */; };
 		54FFC1D4DEA6CDE79C03A6D4 /* Pods_SIXTTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 187F13167D6701F2EAFC9FF6 /* Pods_SIXTTests.framework */; };
 		B617C179265BE4AF00A8A89B /* MapMarkerView.xib in Resources */ = {isa = PBXBuildFile; fileRef = B617C178265BE4AF00A8A89B /* MapMarkerView.xib */; };
 		B617C17E265BE4D700A8A89B /* MapMarkerAnnotationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B617C17D265BE4D700A8A89B /* MapMarkerAnnotationView.swift */; };
@@ -19,26 +18,21 @@
 		B6870BF1265BB55A0066B645 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B6870BEF265BB55A0066B645 /* Main.storyboard */; };
 		B6870BF3265BB55E0066B645 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B6870BF2265BB55E0066B645 /* Assets.xcassets */; };
 		B6870BF6265BB55E0066B645 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B6870BF4265BB55E0066B645 /* LaunchScreen.storyboard */; };
-		B6870C01265BB55E0066B645 /* SIXTTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6870C00265BB55E0066B645 /* SIXTTests.swift */; };
-		B6870C0C265BB55E0066B645 /* SIXTUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6870C0B265BB55E0066B645 /* SIXTUITests.swift */; };
+		B6870C01265BB55E0066B645 /* SixtViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6870C00265BB55E0066B645 /* SixtViewModelTests.swift */; };
 		B6870C30265BB73C0066B645 /* SixtViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6870C2F265BB73C0066B645 /* SixtViewModel.swift */; };
 		B6870C35265BB8190066B645 /* SixtNetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6870C34265BB8190066B645 /* SixtNetworkService.swift */; };
 		B6870C3A265BBAA80066B645 /* SixtMapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6870C39265BBAA80066B645 /* SixtMapViewController.swift */; };
 		B6870C3F265BBADA0066B645 /* SixtListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6870C3E265BBADA0066B645 /* SixtListViewController.swift */; };
 		B6870C47265BBBB40066B645 /* StringConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6870C46265BBBB40066B645 /* StringConstants.swift */; };
 		B6870C4C265BBC620066B645 /* SixtModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6870C4B265BBC620066B645 /* SixtModel.swift */; };
+		B693EFDA265D16610072ABAA /* MoctTextData.swift in Sources */ = {isa = PBXBuildFile; fileRef = B693EFD9265D16610072ABAA /* MoctTextData.swift */; };
+		B6BC6182265C49F000A07D14 /* Reachability.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6BC6181265C49F000A07D14 /* Reachability.swift */; };
+		B6BC6187265C4A1300A07D14 /* CacheManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6BC6186265C4A1300A07D14 /* CacheManager.swift */; };
 		CB63EA9B3998E0EEF62F51CB /* Pods_SIXT.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 263522C7B92F95453857C4E2 /* Pods_SIXT.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
 		B6870BFD265BB55E0066B645 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = B6870BDE265BB55A0066B645 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = B6870BE5265BB55A0066B645;
-			remoteInfo = SIXT;
-		};
-		B6870C08265BB55E0066B645 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = B6870BDE265BB55A0066B645 /* Project object */;
 			proxyType = 1;
@@ -66,17 +60,17 @@
 		B6870BF5265BB55E0066B645 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		B6870BF7265BB55E0066B645 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B6870BFC265BB55E0066B645 /* SIXTTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SIXTTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		B6870C00265BB55E0066B645 /* SIXTTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SIXTTests.swift; sourceTree = "<group>"; };
+		B6870C00265BB55E0066B645 /* SixtViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SixtViewModelTests.swift; sourceTree = "<group>"; };
 		B6870C02265BB55E0066B645 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		B6870C07265BB55E0066B645 /* SIXTUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SIXTUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		B6870C0B265BB55E0066B645 /* SIXTUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SIXTUITests.swift; sourceTree = "<group>"; };
-		B6870C0D265BB55E0066B645 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B6870C2F265BB73C0066B645 /* SixtViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SixtViewModel.swift; sourceTree = "<group>"; };
 		B6870C34265BB8190066B645 /* SixtNetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SixtNetworkService.swift; sourceTree = "<group>"; };
 		B6870C39265BBAA80066B645 /* SixtMapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SixtMapViewController.swift; sourceTree = "<group>"; };
 		B6870C3E265BBADA0066B645 /* SixtListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SixtListViewController.swift; sourceTree = "<group>"; };
 		B6870C46265BBBB40066B645 /* StringConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringConstants.swift; sourceTree = "<group>"; };
 		B6870C4B265BBC620066B645 /* SixtModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SixtModel.swift; sourceTree = "<group>"; };
+		B693EFD9265D16610072ABAA /* MoctTextData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoctTextData.swift; sourceTree = "<group>"; };
+		B6BC6181265C49F000A07D14 /* Reachability.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Reachability.swift; sourceTree = "<group>"; };
+		B6BC6186265C4A1300A07D14 /* CacheManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CacheManager.swift; sourceTree = "<group>"; };
 		C88F5B5A7AD88B9664614B3B /* Pods-SIXT.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SIXT.debug.xcconfig"; path = "Target Support Files/Pods-SIXT/Pods-SIXT.debug.xcconfig"; sourceTree = "<group>"; };
 		CE1045FEF08FEE5C43DB3FA2 /* Pods-SIXT.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SIXT.release.xcconfig"; path = "Target Support Files/Pods-SIXT/Pods-SIXT.release.xcconfig"; sourceTree = "<group>"; };
 		D6CE991C36592A081866052B /* Pods-SIXT-SIXTUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SIXT-SIXTUITests.release.xcconfig"; path = "Target Support Files/Pods-SIXT-SIXTUITests/Pods-SIXT-SIXTUITests.release.xcconfig"; sourceTree = "<group>"; };
@@ -97,14 +91,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				54FFC1D4DEA6CDE79C03A6D4 /* Pods_SIXTTests.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		B6870C04265BB55E0066B645 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				2F0FD6F7E753F73EF1F6E9C1 /* Pods_SIXT_SIXTUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -129,7 +115,6 @@
 			children = (
 				B6870BE8265BB55A0066B645 /* SIXT */,
 				B6870BFF265BB55E0066B645 /* SIXTTests */,
-				B6870C0A265BB55E0066B645 /* SIXTUITests */,
 				B6870BE7265BB55A0066B645 /* Products */,
 				8E18B3DF1757D16B4BF8BFAA /* Pods */,
 				D070C868B43AD178E5D92549 /* Frameworks */,
@@ -141,7 +126,6 @@
 			children = (
 				B6870BE6265BB55A0066B645 /* SIXT.app */,
 				B6870BFC265BB55E0066B645 /* SIXTTests.xctest */,
-				B6870C07265BB55E0066B645 /* SIXTUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -164,19 +148,10 @@
 		B6870BFF265BB55E0066B645 /* SIXTTests */ = {
 			isa = PBXGroup;
 			children = (
-				B6870C00265BB55E0066B645 /* SIXTTests.swift */,
+				B6870C00265BB55E0066B645 /* SixtViewModelTests.swift */,
 				B6870C02265BB55E0066B645 /* Info.plist */,
 			);
 			path = SIXTTests;
-			sourceTree = "<group>";
-		};
-		B6870C0A265BB55E0066B645 /* SIXTUITests */ = {
-			isa = PBXGroup;
-			children = (
-				B6870C0B265BB55E0066B645 /* SIXTUITests.swift */,
-				B6870C0D265BB55E0066B645 /* Info.plist */,
-			);
-			path = SIXTUITests;
 			sourceTree = "<group>";
 		};
 		B6870C1C265BB5FE0066B645 /* App */ = {
@@ -212,6 +187,8 @@
 			isa = PBXGroup;
 			children = (
 				B6870C34265BB8190066B645 /* SixtNetworkService.swift */,
+				B6BC6181265C49F000A07D14 /* Reachability.swift */,
+				B6BC6186265C4A1300A07D14 /* CacheManager.swift */,
 			);
 			path = "Network Service";
 			sourceTree = "<group>";
@@ -236,6 +213,7 @@
 			isa = PBXGroup;
 			children = (
 				B6870C46265BBBB40066B645 /* StringConstants.swift */,
+				B693EFD9265D16610072ABAA /* MoctTextData.swift */,
 			);
 			path = Constants;
 			sourceTree = "<group>";
@@ -319,26 +297,6 @@
 			productReference = B6870BFC265BB55E0066B645 /* SIXTTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
-		B6870C06265BB55E0066B645 /* SIXTUITests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = B6870C16265BB55E0066B645 /* Build configuration list for PBXNativeTarget "SIXTUITests" */;
-			buildPhases = (
-				1CA91CA5A0DB4E8FD2B06282 /* [CP] Check Pods Manifest.lock */,
-				B6870C03265BB55E0066B645 /* Sources */,
-				B6870C04265BB55E0066B645 /* Frameworks */,
-				B6870C05265BB55E0066B645 /* Resources */,
-				355B064B5A062C25D380FDBB /* [CP] Embed Pods Frameworks */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				B6870C09265BB55E0066B645 /* PBXTargetDependency */,
-			);
-			name = SIXTUITests;
-			productName = SIXTUITests;
-			productReference = B6870C07265BB55E0066B645 /* SIXTUITests.xctest */;
-			productType = "com.apple.product-type.bundle.ui-testing";
-		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -352,10 +310,6 @@
 						CreatedOnToolsVersion = 12.4;
 					};
 					B6870BFB265BB55E0066B645 = {
-						CreatedOnToolsVersion = 12.4;
-						TestTargetID = B6870BE5265BB55A0066B645;
-					};
-					B6870C06265BB55E0066B645 = {
 						CreatedOnToolsVersion = 12.4;
 						TestTargetID = B6870BE5265BB55A0066B645;
 					};
@@ -376,7 +330,6 @@
 			targets = (
 				B6870BE5265BB55A0066B645 /* SIXT */,
 				B6870BFB265BB55E0066B645 /* SIXTTests */,
-				B6870C06265BB55E0066B645 /* SIXTUITests */,
 			);
 		};
 /* End PBXProject section */
@@ -400,38 +353,9 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		B6870C05265BB55E0066B645 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		1CA91CA5A0DB4E8FD2B06282 /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
-				"${PODS_ROOT}/Manifest.lock",
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputFileListPaths = (
-			);
-			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-SIXT-SIXTUITests-checkManifestLockResult.txt",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
 		28B8E517A977F08C1A22744A /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -471,23 +395,6 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		355B064B5A062C25D380FDBB /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-SIXT-SIXTUITests/Pods-SIXT-SIXTUITests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-SIXT-SIXTUITests/Pods-SIXT-SIXTUITests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-SIXT-SIXTUITests/Pods-SIXT-SIXTUITests-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
 		3AC0CE00840CF8155560D662 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -523,12 +430,15 @@
 				B617C183265BE84100A8A89B /* View+Extensions.swift in Sources */,
 				B6870BEA265BB55A0066B645 /* AppDelegate.swift in Sources */,
 				B6870C30265BB73C0066B645 /* SixtViewModel.swift in Sources */,
+				B6BC6187265C4A1300A07D14 /* CacheManager.swift in Sources */,
 				B6870C47265BBBB40066B645 /* StringConstants.swift in Sources */,
 				B6870C3A265BBAA80066B645 /* SixtMapViewController.swift in Sources */,
 				B6870BEC265BB55A0066B645 /* SceneDelegate.swift in Sources */,
 				B6870C4C265BBC620066B645 /* SixtModel.swift in Sources */,
 				B6870C35265BB8190066B645 /* SixtNetworkService.swift in Sources */,
 				B617C17E265BE4D700A8A89B /* MapMarkerAnnotationView.swift in Sources */,
+				B693EFDA265D16610072ABAA /* MoctTextData.swift in Sources */,
+				B6BC6182265C49F000A07D14 /* Reachability.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -536,15 +446,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B6870C01265BB55E0066B645 /* SIXTTests.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		B6870C03265BB55E0066B645 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				B6870C0C265BB55E0066B645 /* SIXTUITests.swift in Sources */,
+				B6870C01265BB55E0066B645 /* SixtViewModelTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -555,11 +457,6 @@
 			isa = PBXTargetDependency;
 			target = B6870BE5265BB55A0066B645 /* SIXT */;
 			targetProxy = B6870BFD265BB55E0066B645 /* PBXContainerItemProxy */;
-		};
-		B6870C09265BB55E0066B645 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = B6870BE5265BB55A0066B645 /* SIXT */;
-			targetProxy = B6870C08265BB55E0066B645 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -692,6 +589,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 14.4;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
 				SWIFT_COMPILATION_MODE = wholemodule;
 				SWIFT_OPTIMIZATION_LEVEL = "-O";
@@ -785,48 +683,6 @@
 			};
 			name = Release;
 		};
-		B6870C17265BB55E0066B645 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = B1D2E2B441C4B8AAEBA14FD8 /* Pods-SIXT-SIXTUITests.debug.xcconfig */;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = M74ZCP24NH;
-				INFOPLIST_FILE = SIXTUITests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.work.SIXTUITests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = SIXT;
-			};
-			name = Debug;
-		};
-		B6870C18265BB55E0066B645 /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = D6CE991C36592A081866052B /* Pods-SIXT-SIXTUITests.release.xcconfig */;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = M74ZCP24NH;
-				INFOPLIST_FILE = SIXTUITests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.work.SIXTUITests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = SIXT;
-			};
-			name = Release;
-		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -853,15 +709,6 @@
 			buildConfigurations = (
 				B6870C14265BB55E0066B645 /* Debug */,
 				B6870C15265BB55E0066B645 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		B6870C16265BB55E0066B645 /* Build configuration list for PBXNativeTarget "SIXTUITests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				B6870C17265BB55E0066B645 /* Debug */,
-				B6870C18265BB55E0066B645 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

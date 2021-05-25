@@ -41,6 +41,8 @@ class SixtViewModel {
     private func createAnnotation(from model: SixtModel) -> MGLPointAnnotation {
         let annotation = MGLPointAnnotation()
         annotation.coordinate = model.coordinates
+        annotation.title = model.make + " " + model.modelName
+        annotation.subtitle = model.name
         annotation.accessibilityHint = model.carImageUrl
         return annotation
     }
@@ -69,6 +71,10 @@ class SixtViewModel {
 }
 
 extension SixtViewModel: SixtNetworkServiceDelegate {
+    func onFail(error: Error) {
+        delegate?.onFail(error: error)
+    }
+    
     func onGetCars(cars: [SixtModel]) {
         self.updateCars(with: cars)
         self.setAnnotation(from: cars)
@@ -78,4 +84,5 @@ extension SixtViewModel: SixtNetworkServiceDelegate {
 
 protocol SixtViewModelDelegate: class {
     func carsGotten()
+    func onFail(error: Error)
 }

@@ -8,7 +8,7 @@
 import Foundation
 import Mapbox
 
-struct SixtModel: Decodable {
+struct SixtModel: Decodable, Equatable {
     var id: String
     var modelIdentifier: String
     var modelName: String
